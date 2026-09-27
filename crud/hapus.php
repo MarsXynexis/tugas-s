@@ -7,5 +7,7 @@ if (!$conn) {
 if (isset($_GET['id'])) {
     $query = "DELETE FROM berita WHERE ID = '$_GET[id]'";
     mysqli_query($conn, $query);
-    }
+    $nama_gambar = $_GET['judul'] . '.png';
+    unlink("src/" . $nama_gambar);
+}
 header("Location: index.php" . (isset($_GET['id']) ? "?id=" . $_GET['id'] : ""));

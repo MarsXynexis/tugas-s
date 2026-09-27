@@ -51,7 +51,7 @@ $beritas = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     echo "<td>" . $berita['JUDUL'] . "</td>";
                     echo "<td>" . $berita['ISI'] . "</td>";
                     echo "<td>" . $berita['PENERBIT'] . "</td>";
-                    echo "<td><a href='input.php?id=" . $berita['ID'] . "'>Edit</a> | <a href='hapus.php?id=" . $berita['ID'] . "'>Hapus</a></td>";
+                    echo "<td><a href='input.php?id=" . $berita['ID'] . "'>Edit</a> | <a href='hapus.php?id=" . $berita['ID'] . "&judul=" . $berita['JUDUL'] . "'>Hapus</a></td>";
                     echo "</tr>";
                 }
                 ?>
